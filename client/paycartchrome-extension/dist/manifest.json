@@ -7,7 +7,7 @@
         "default_popup":"src/auth.html"
     },
     "externally_connectable": {
-        "matches": ["http://127.0.0.1:5173/*"]
+        "matches": ["http://127.0.0.1:5174/*"]
       },
       "background": {
         "service_worker": "assets/background-69a560bb.js",
