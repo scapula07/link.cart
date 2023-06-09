@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Link.cart",
+  "description": "Add the reading time to Chrome Extension documentation articles",
+  "version": "1.0",
+  "action":{
+      "default_popup":"src/auth.html"
+  },
+  "externally_connectable": {
+      "matches": ["http://127.0.0.1:5174/*"]
+    },
+    "background": {
+      "service_worker": "assets/background-69a560bb.js",
+      "type": "module"
+    },
+    "host_permissions": [
+      "https://rpc.chiado.gnosis.gateway.fm/*",
+      "http://*/*", "https://*/*"
+
+   ],
+
+   
+    "permissions": ["gcm", "storage", "notifications","tabs","activeTab"]
+
+}

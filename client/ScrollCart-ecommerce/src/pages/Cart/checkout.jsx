@@ -8,13 +8,13 @@ export default function Checkout({carts}) {
 
 
     
-    var extensionId = "ojpgefcpiicakbipcjegbinbccionhkd";
+    var extensionId = "cfbnfofnpjebmbgkdilaoamifobmgdpa";
 
         // Make a simple request:
        
         const sendExtMsg=()=>{
             console.log("sending")
-            chrome.runtime?.sendMessage(extensionId, {message:carts,vendorWallet:{address: "0x627306090abab3a6e1400e9345bc60c78a8bef57",privateKey:"0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3"}
+            chrome.runtime?.sendMessage(extensionId, {message:carts,vendorAddress:"0x7b158840956385dE998fC306053dBEE0A007dB3b"
                },
                 function(response) {
                     console.log(response,"response")

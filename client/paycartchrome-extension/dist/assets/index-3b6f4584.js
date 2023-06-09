@@ -1,1 +1,0 @@
-import{j as s}from"./index-f23b3acd.js";function i({children:o,cname:a,trigger:l,onClose:d}){return s.jsx("div",{children:l?s.jsx("div",{className:"overlay-style",children:s.jsx("div",{className:`modal-upload ${a}`,children:o})}):s.jsx("div",{})})}export{i as M};
