@@ -1,6 +1,7 @@
-import React from 'react'
+import React ,{useState,useEffect} from 'react'
 
 export default function Borrow() {
+    const [collateral,setCollateral] =useState()
   return (
     <div className='flex flex-col w-full space-y-8'>
         <main className='flex items-center jsutify-between rounde-sm border w-full   '>

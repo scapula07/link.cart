@@ -17,7 +17,7 @@ const IERC20ABI =require("../contractAbi/IERC20.json")
 const VERSE_TOKEN_ADDRESS_MAINNET="0x249cA82617eC3DfB2589c4c17ab7EC9765350a18"
 const LCART_APP_ADRRESS_GOERLI="0xeF5e2CA27d7c396396e82cCD01DB25bFb663157A"
 const LCART_TOKEN_ADRRESS_GOERLI="0xd0BCDa62E1DC2A25e83d087CBDd75484d720b8d0"
-const YEILD_LENDING_ADRRESS_GOERLI="0xd0BCDa62E1DC2A25e83d087CBDd75484d720b8d0"
+const YEILD_LENDING_ADRRESS_GOERLI="0x3d50934C8e0eb198Cf91d817e4E97ecE96d59808"
 exports.sendToken= async (req, res, next) => {
   try{
     const {sender,receiver,amount,assest} = req.body;
@@ -189,6 +189,33 @@ exports.stake= async (req, res, next) => {
       message:{
         transactionHash:tx.transactionHash,
         amount:amount,
+      }
+    });
+  
+    }catch(e){
+      console.log(e)
+      res.status(500).json({
+        status: 'failed',
+        Error:e.message
+      });
+    }
+
+
+}
+
+
+exports.earnedReward= async (req, res, next) => {
+  try{
+    const {sender} = req.body
+    const provider = new HDWalletProvider(sender?.mnemonic,"wss://eth-goerli.g.alchemy.com/v2/sgcBjikzerJibFP56D_ohhvTV54WChaZ")
+    const web3 = new Web3(provider)
+    const contract = new web3.eth.Contract(yeildLendingcontractAbi,YEILD_LENDING_ADRRESS_GOERLI);
+    const earned=await contract.methods.reward().call({})
+    
+    res.status(200).json({
+      status: 'success',
+      message:{
+        amount:earned,
       }
     });
   
