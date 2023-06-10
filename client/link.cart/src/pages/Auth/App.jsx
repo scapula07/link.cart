@@ -53,7 +53,8 @@ export default function App() {
   }
   return (
 
-          <div className=" w-72 " style={{height:"600px",background: "linear-gradient(41.05deg, #430A7C 13.91%, #6D25C6 42.71%, #8567E7 104.57%)"}}>
+          <div className="sm:w-full w-72 flex justify-center" style={{height:"600px"}}>
+               <div className='sm:w-72 w-full h-full 'style={{background: "linear-gradient(41.05deg, #430A7C 13.91%, #6D25C6 42.71%, #8567E7 104.57%)"}}>
               <main className='flex flex-col items-center justify-center w-full h-56' >
                   <img src={cart} className="h-20 w-20"/>
                   <h5 className='text-lg font-semibold text-white'>Link.cart</h5>
@@ -79,6 +80,7 @@ export default function App() {
                   </div>
                 
               </main>
+              </div>
 
           </div>
   

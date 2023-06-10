@@ -50,6 +50,7 @@ export default function Checkout({total,vendorAddress,user}) {
            console.log(e)
            setLoading(false)
            setError(e.message)
+           setTrigger(true)
        }
 
 

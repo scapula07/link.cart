@@ -31,7 +31,7 @@ export default function App() {
         <div className='py-4'> 
            <main className='flex items-center space-x-4'>
               <MdOutlineKeyboardArrowLeft className='text-xl font-semibold'/>
-               <h5 className='text-sm font-semibold'>Carts</h5>
+               <h5 className='text-sm font-semibold'>Payment</h5>
 
            </main>
 
