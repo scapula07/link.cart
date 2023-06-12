@@ -18,6 +18,7 @@ export default defineConfig({
         staking:resolve(root, 'staking.html'),
         deposit:resolve(root, 'deposit.html'),
         background: resolve(pagesDir, "Background", "index.js"),
+        dex:resolve(root, 'dex.html'),
       },
     },
   }

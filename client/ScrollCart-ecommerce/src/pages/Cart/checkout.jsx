@@ -49,7 +49,7 @@ export default function Checkout({carts}) {
         <div className=''>
             <h5 className='border-b '>Payment methods</h5>
             <main className='flex justify-center py-6'>
-            <button className='bg-slate-400 text-white py-2 px-8 rounded-lg text-sm font-semibold w-full' onClick={sendExtMsg}>Paycart</button>
+            <button className='bg-slate-400 text-white py-2 px-8 rounded-lg text-sm font-semibold w-full' onClick={sendExtMsg}>Link.cart</button>
             </main>
 
             

@@ -7,12 +7,12 @@ export default function App() {
     <OtherLayout >
          <div>
             <main className='flex items-center space-x-4'>
-                <MdOutlineKeyboardArrowLeft className='text-xl font-semibold'/>
+                <MdOutlineKeyboardArrowLeft className='text-xl font-semibold' onClick={() => history.go(-1)}/>
                 <h5 className='text-sm font-semibold'>Deposit</h5>
 
             </main>
             <div>
-                
+
             </div>
 
           </div>

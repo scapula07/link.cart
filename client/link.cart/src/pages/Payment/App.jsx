@@ -5,6 +5,7 @@ import {MdOutlineKeyboardArrowLeft} from "react-icons/md"
 import OtherLayout from '../../layout/OtherLayout'
 import {BsSendFill,BsBank2,BsDot} from "react-icons/bs"
 import {GiPayMoney} from "react-icons/gi"
+import {CgArrowsExchangeAltV} from "react-icons/cg"
 
 
 const Card=({icon,title,link})=>{
@@ -30,7 +31,7 @@ export default function App() {
     <OtherLayout>
         <div className='py-4'> 
            <main className='flex items-center space-x-4'>
-              <MdOutlineKeyboardArrowLeft className='text-xl font-semibold'/>
+              <MdOutlineKeyboardArrowLeft className='text-xl font-semibold'  onClick={() => history.go(-1)}/>
                <h5 className='text-sm font-semibold'>Payment</h5>
 
            </main>
@@ -51,9 +52,14 @@ export default function App() {
                 title:"Pay your cart",
                 link:"cart.html"
               },
-              {icon:<BsDot className="text-white text-4xl font-semibold"/>,
+              {icon:<BsDot className="text-white text-2xl font-semibold"/>,
               title:"Lending and Yield service",
               link:"lending.html"
+
+              },
+              {icon:<CgArrowsExchangeAltV className="text-white text-2xl font-semibold"/>,
+              title:"DEX and Bridge",
+              link:"dex.html"
 
               }
             

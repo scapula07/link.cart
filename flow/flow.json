@@ -1,0 +1,46 @@
+{
+	"contracts": {
+		"FungibleToken": {
+			"source": "./contracts/FungibleToken.cdc",
+			"aliases": {
+				"emulator": "ee82856bf20e2aa6",
+				"mainnet": "f233dcee88fe0abe",
+				"testnet": "9a0766d93b6608b7"
+			}
+		},
+		"LinkCartToken": "./contracts/LinkCartToken.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"sandboxnet": "access.sandboxnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"admin-account": {
+			"address": "ba011b6b107d8225",
+			"key": {
+				"type": "file",
+				"location": "admin-account.pkey"
+			}
+		},
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "27351a89778ca16d58043c59a860570fbaa32b16ecccaac29c39bc71a3d6de4a"
+		}
+	},
+	"deployments": {
+		"emulator": {
+			"emulator-account": [
+				"FungibleToken",
+				"LinkCartToken"
+			]
+		},
+		"testnet": {
+			"admin-account": [
+				"FungibleToken",
+				"LinkCartToken"
+			]
+		}
+	}
+}

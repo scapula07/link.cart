@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Link.cart",
+  "description": "Link.cart is s a chrome web extension wallet and blockchain payment gateway that allows users to pay for goods or services on online stores or market places. Link.cart allows user pay for any goods right off their wallets",
+  "version": "1.0",
+  "icons": {
+    "16": "assets/paycart-fafd1464.png",
+    "32":  "assets/paycart-fafd1464.png",
+    "48":  "assets/paycart-fafd1464.png",
+    "128":  "assets/paycart-fafd1464.png"
+  },
+  "action":{
+      "default_popup":"src/auth.html"
+  },
+  "externally_connectable": {
+      "matches": ["http://127.0.0.1:5174/*"]
+    },
+    "background": {
+      "service_worker": "assets/background-69a560bb.js",
+      "type": "module"
+    },
+    "host_permissions": [
+      "https://rpc.chiado.gnosis.gateway.fm/*",
+      "http://*/*", "https://*/*"
+
+   ],
+
+   
+    "permissions": ["gcm", "storage", "notifications","tabs","activeTab"]
+
+}

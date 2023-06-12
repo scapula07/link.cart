@@ -1,0 +1,1 @@
+import{j as s}from"./index-628f68f4.js";function d({children:a,cname:o,trigger:e,onClose:c}){return s.jsx("div",{children:e?s.jsx("div",{className:"overlay-style",children:s.jsx("div",{className:`modal-upload ${o}`,children:a})}):s.jsx("div",{})})}const n="/assets/success-3a525c2b.png";export{d as M,n as s};
